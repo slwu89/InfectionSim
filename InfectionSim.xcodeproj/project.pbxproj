@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CCE5623C1F86EA4B00BCAC95 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE5623B1F86EA4B00BCAC95 /* main.cpp */; };
+		CCE562451F86EA7E00BCAC95 /* human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE562431F86EA7E00BCAC95 /* human.cpp */; };
+		CCE562481F86EB8700BCAC95 /* house.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE562461F86EB8700BCAC95 /* house.cpp */; };
+		CCE5624B1F86F4A300BCAC95 /* block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE562491F86F4A300BCAC95 /* block.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		CCE562381F86EA4B00BCAC95 /* InfectionSim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InfectionSim; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE5623B1F86EA4B00BCAC95 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CCE562431F86EA7E00BCAC95 /* human.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = human.cpp; sourceTree = "<group>"; };
+		CCE562441F86EA7E00BCAC95 /* human.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = human.hpp; sourceTree = "<group>"; };
+		CCE562461F86EB8700BCAC95 /* house.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = house.cpp; sourceTree = "<group>"; };
+		CCE562471F86EB8700BCAC95 /* house.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = house.hpp; sourceTree = "<group>"; };
+		CCE562491F86F4A300BCAC95 /* block.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = block.cpp; sourceTree = "<group>"; };
+		CCE5624A1F86F4A300BCAC95 /* block.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = block.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				CCE5623B1F86EA4B00BCAC95 /* main.cpp */,
+				CCE562431F86EA7E00BCAC95 /* human.cpp */,
+				CCE562441F86EA7E00BCAC95 /* human.hpp */,
+				CCE562461F86EB8700BCAC95 /* house.cpp */,
+				CCE562471F86EB8700BCAC95 /* house.hpp */,
+				CCE562491F86F4A300BCAC95 /* block.cpp */,
+				CCE5624A1F86F4A300BCAC95 /* block.hpp */,
 			);
 			path = InfectionSim;
 			sourceTree = "<group>";
@@ -120,6 +135,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCE5623C1F86EA4B00BCAC95 /* main.cpp in Sources */,
+				CCE5624B1F86F4A300BCAC95 /* block.cpp in Sources */,
+				CCE562481F86EB8700BCAC95 /* house.cpp in Sources */,
+				CCE562451F86EA7E00BCAC95 /* human.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
