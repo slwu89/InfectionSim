@@ -19,6 +19,7 @@ public:
     
     int                         get_id();
     int                         get_block_id();
+    void                        set_block_id(const int &b_id);
     
     void                        set_block_ptr(block* b);
     block*                      get_block_ptr();
@@ -38,7 +39,6 @@ private:
     std::set<human*>            humans;     // list of people here now
     
     block*                      block_ptr;  // pointer to block
-    
 };
 
 #endif /* house_hpp */

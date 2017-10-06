@@ -29,6 +29,10 @@ int house::get_block_id(){
     return(block_id);
 };
 
+void house::set_block_id(const int &b_id){
+    block_id = b_id;
+};
+
 void house::set_block_ptr(block* b){
     block_ptr = b;
 };
@@ -43,6 +47,8 @@ block* house::get_block_ptr(){
  */
 
 void house::add_human(human* h){
+    h->set_home_address(this,block_ptr);
+    h->set_current_address(this,block_ptr);
     humans.insert(h);
 };
 

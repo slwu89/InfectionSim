@@ -14,6 +14,8 @@ public:
     block(const int &id_new);
     ~block();
     
+    int                         get_id();
+    
     void                        add_house(house* h);
     int                         get_house_n();
     house*                      get_house(const int &h_id);

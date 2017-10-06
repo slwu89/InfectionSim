@@ -14,6 +14,13 @@ block::~block(){
     std::cout << "i'm an object of class block getting killed at memory location: " << this << std::endl;
 };
 
+/*
+ basic accessors
+ */
+int block::get_id(){
+    return(id);
+}
+
 
 /*
  house stuff
@@ -21,6 +28,7 @@ block::~block(){
 
 void block::add_house(house* h){
     h->set_block_ptr(this);
+    h->set_block_id(id);
     houses.insert(h);
 };
 
