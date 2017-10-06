@@ -1,13 +1,12 @@
 #include "house.hpp"
-
+#include "block.hpp"
 
 /*
     constructor & destructor
 */
 
-house::house(const int &id_new, const int &block_id_new){
+house::house(const int &id_new){
     id = id_new;
-    block_id = block_id_new;
     std::cout << "i'm an object of class house being born at memory location: " << this << std::endl;
 };
 
@@ -25,13 +24,6 @@ int house::get_id(){
     return(id);
 };
 
-int house::get_block_id(){
-    return(block_id);
-};
-
-void house::set_block_id(const int &b_id){
-    block_id = b_id;
-};
 
 void house::set_block_ptr(block* b){
     block_ptr = b;
@@ -55,7 +47,7 @@ void house::add_human(human* h){
 void house::check_human(const int &h_id){
     auto it = std::find_if(humans.begin(), humans.end(), [h_id](human* h){ return h->get_id()==h_id; });
     if(it != humans.end()){
-        std::cout << "found the human: " << (*it)->get_id() << " in house " << id << " and block " << block_id << std::endl;
+        std::cout << "found the human: " << (*it)->get_id() << " in house " << id << " and block " << block_ptr->get_id() << std::endl;
     } else {
         std::cout << "human not found in house " << id << std::endl;
     }

@@ -28,7 +28,6 @@ int block::get_id(){
 
 void block::add_house(house* h){
     h->set_block_ptr(this);
-    h->set_block_id(id);
     houses.insert(h);
 };
 
