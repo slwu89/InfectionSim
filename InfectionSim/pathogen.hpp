@@ -13,13 +13,26 @@ class human; // forward declare human
 
 #include <stdio.h>
 
-class pathogen {
+class pathogen_interface {
 public:
-    ~pathogen();
-    human*                          get_human_ptr(){return(human_ptr);}
-    
+    virtual ~pathogen_interface();
+    virtual void fun() = 0;
+};
+
+class pathogen_implementation {
+public:
+    virtual ~pathogen_implementation();
+    virtual void fun1() = 0;
+};
+
+class pathogen_bridge : public pathogen_interface {
 protected:
-    human*                          human_ptr;
+    pathogen_implementation* p_implementation;
+    
+public:
+    pathogen_bridge(pathogen_implementation* p_backend){
+        p_implementation = p_backend;
+    }
 };
 
 
