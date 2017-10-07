@@ -6,9 +6,9 @@
 #include <algorithm>
 #include <iostream>
 
-#include <boost/geometry.hpp>
-#include <boost/geometry/geometries/polygon.hpp>
-#include <boost/geometry/geometries/adapted/boost_tuple.hpp>
+//#include <boost/geometry.hpp>
+//#include <boost/geometry/geometries/polygon.hpp>
+//#include <boost/geometry/geometries/adapted/boost_tuple.hpp>
 
 #include "human.hpp"
 
