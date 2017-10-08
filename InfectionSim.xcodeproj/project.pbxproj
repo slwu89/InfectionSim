@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC116E4C1F8AD9DB0028E89B /* debug.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = debug.hpp; sourceTree = "<group>"; };
 		CCA23EB81F8828670001D6EB /* pathogen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = pathogen.hpp; sourceTree = "<group>"; };
 		CCE562381F86EA4B00BCAC95 /* InfectionSim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InfectionSim; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE5623B1F86EA4B00BCAC95 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 				CCE562471F86EB8700BCAC95 /* house.hpp */,
 				CCE562491F86F4A300BCAC95 /* block.cpp */,
 				CCE5624A1F86F4A300BCAC95 /* block.hpp */,
+				CC116E4C1F8AD9DB0028E89B /* debug.hpp */,
 			);
 			path = InfectionSim;
 			sourceTree = "<group>";

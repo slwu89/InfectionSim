@@ -41,6 +41,15 @@ void human::set_current_address(house* h, block* b){
     std::get<1>(current_address) = b;
 };
 
+// pathogen
+pathogen_abstract* human::get_pathogen(){
+    return(pathogen_ptr);
+}
+
+void human::set_pathogen(pathogen_abstract* p){
+    p->set_human_ptr(this);
+    pathogen_ptr = p;
+}
 
 //debug
 void human::get_memLoc(){

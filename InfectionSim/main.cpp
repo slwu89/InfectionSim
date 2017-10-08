@@ -36,10 +36,14 @@ int main() {
     pathogen_implementation* p_falciparum_implementation = new pathogen_p_falciparum;
     
     usePathogen = new pathogen(p_falciparum_implementation);
-    usePathogen->fun();
+    city[0]->get_house(1)->get_human(3)->set_pathogen(usePathogen);
+    city[0]->get_house(1)->get_human(3)->get_pathogen()->fun();
+    
     
     usePathogen = new pathogen(p_vivax_implementation);
-    usePathogen->fun();
+    city[0]->get_house(1)->get_human(4)->set_pathogen(usePathogen);
+    city[0]->get_house(1)->get_human(4)->get_pathogen()->fun();
+    
 
     return 0;
 }
