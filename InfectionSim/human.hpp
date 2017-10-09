@@ -10,7 +10,6 @@
 
 class house; // forward declare house
 class block; // forward declare block
-//class pathogen_abstract; // forward declare pathogen
 typedef std::tuple<house*,block*> address;
 
 class human {
@@ -21,6 +20,8 @@ public:
     int                         get_id();
     std::string                 get_state();
     void                        set_state(const std::string &state_new);
+    bool                        get_inf();
+    void                        set_inf(const bool &i);
     
     // home address: my house and block
     address                     get_home_address();
@@ -39,7 +40,8 @@ public:
 private:
     
     int                         id;                 // id
-    std::string                 state;              // life state
+    std::string                 state;              // my life state
+    bool                        inf;                // my infection status
     
     address                     home_address;       // home address
     address                     current_address;    // current address

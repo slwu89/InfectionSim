@@ -22,6 +22,15 @@ void human::set_state(const std::string &state_new){
     state = state_new;
 };
 
+bool human::get_inf(){
+    return(inf);
+};
+
+void human::set_inf(const bool &i){
+    inf = i;
+};
+
+
 // address
 address human::get_home_address(){
     return(home_address);

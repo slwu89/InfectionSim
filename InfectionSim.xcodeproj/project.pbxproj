@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC5012B41F8B0CAE00422D64 /* pathogen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC5012B21F8B0CAE00422D64 /* pathogen.cpp */; };
 		CCE5623C1F86EA4B00BCAC95 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE5623B1F86EA4B00BCAC95 /* main.cpp */; };
 		CCE562451F86EA7E00BCAC95 /* human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE562431F86EA7E00BCAC95 /* human.cpp */; };
 		CCE562481F86EB8700BCAC95 /* house.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE562461F86EB8700BCAC95 /* house.cpp */; };
@@ -27,7 +28,8 @@
 
 /* Begin PBXFileReference section */
 		CC116E4C1F8AD9DB0028E89B /* debug.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = debug.hpp; sourceTree = "<group>"; };
-		CCA23EB81F8828670001D6EB /* pathogen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = pathogen.hpp; sourceTree = "<group>"; };
+		CC5012B21F8B0CAE00422D64 /* pathogen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pathogen.cpp; sourceTree = "<group>"; };
+		CC5012B31F8B0CAE00422D64 /* pathogen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = pathogen.hpp; sourceTree = "<group>"; };
 		CCE562381F86EA4B00BCAC95 /* InfectionSim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InfectionSim; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE5623B1F86EA4B00BCAC95 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CCE562431F86EA7E00BCAC95 /* human.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = human.cpp; sourceTree = "<group>"; };
@@ -71,7 +73,8 @@
 				CCE5623B1F86EA4B00BCAC95 /* main.cpp */,
 				CCE562431F86EA7E00BCAC95 /* human.cpp */,
 				CCE562441F86EA7E00BCAC95 /* human.hpp */,
-				CCA23EB81F8828670001D6EB /* pathogen.hpp */,
+				CC5012B21F8B0CAE00422D64 /* pathogen.cpp */,
+				CC5012B31F8B0CAE00422D64 /* pathogen.hpp */,
 				CCE562461F86EB8700BCAC95 /* house.cpp */,
 				CCE562471F86EB8700BCAC95 /* house.hpp */,
 				CCE562491F86F4A300BCAC95 /* block.cpp */,
@@ -140,6 +143,7 @@
 			files = (
 				CCE5623C1F86EA4B00BCAC95 /* main.cpp in Sources */,
 				CCE5624B1F86F4A300BCAC95 /* block.cpp in Sources */,
+				CC5012B41F8B0CAE00422D64 /* pathogen.cpp in Sources */,
 				CCE562481F86EB8700BCAC95 /* house.cpp in Sources */,
 				CCE562451F86EA7E00BCAC95 /* human.cpp in Sources */,
 			);
