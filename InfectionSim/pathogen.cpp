@@ -1,7 +1,6 @@
 #include "pathogen.hpp"
 #include "human.hpp"
 
-
 // pathogen_bridge
 
 pathogen_bridge::pathogen_bridge(pathogen_implementation* p_backend){
