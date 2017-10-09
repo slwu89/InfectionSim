@@ -1,11 +1,3 @@
-//
-//  pathogen.cpp
-//  InfectionSim
-//
-//  Created by Sean Wu on 10/8/17.
-//  Copyright © 2017 Sean Wu. All rights reserved.
-//
-
 #include "pathogen.hpp"
 #include "human.hpp"
 
@@ -19,7 +11,9 @@ pathogen_bridge::pathogen_bridge(pathogen_implementation* p_backend){
 // pathogen
 
 pathogen::pathogen(pathogen_implementation* p_backend) : pathogen_bridge(p_backend) {
-        std::cout << "object of class pathogen being born at memory location: " << this << std::endl;
+    #ifdef DEBUG_INFSIM
+    std::cout << "object of class pathogen being born at memory location: " << this << std::endl;
+    #endif
 };
 
 void pathogen::fun(){

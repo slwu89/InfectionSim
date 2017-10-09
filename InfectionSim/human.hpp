@@ -6,6 +6,8 @@
 #include <tuple>
 #include <iostream>
 
+#include "debug.hpp"
+
 #include "pathogen.hpp"
 
 class house; // forward declare house
@@ -26,10 +28,14 @@ public:
     // home address: my house and block
     address                     get_home_address();
     void                        set_home_address(house* h, block* b);
+    house*                      get_home_house();
+    block*                      get_home_block();
     
     // current address: my house and block
     address                     get_current_address();
     void                        set_current_address(house* h, block* b);
+    house*                      get_current_house();
+    block*                      get_current_block();
     
     // pathogen: pathogens infecting me
     pathogen_abstract*          get_pathogen();

@@ -3,11 +3,15 @@
 // properties of human
 human::human(const int &id_new){
     id = id_new;
-    std::cout << "human " << id << " being born at memory location: " << this << std::endl;
+    #ifdef DEBUG_INFSIM
+    std::cout << "node " << id << " being born at memory location: " << this << std::endl;;
+    #endif
 };
 
 human::~human(){
+    #ifdef DEBUG_INFSIM
     std::cout << "human " << id << " getting killed at memory location: " << this << std::endl;
+    #endif
 };
 
 int human::get_id(){
@@ -41,6 +45,14 @@ void human::set_home_address(house* h, block* b){
     std::get<1>(home_address) = b;
 };
 
+house* human::get_home_house(){
+    return std::get<0>(home_address);
+};
+
+block* human::get_home_block(){
+    return std::get<1>(home_address);
+};
+
 address human::get_current_address(){
     return(current_address);
 };
@@ -48,6 +60,14 @@ address human::get_current_address(){
 void human::set_current_address(house* h, block* b){
     std::get<0>(current_address) = h;
     std::get<1>(current_address) = b;
+};
+
+house* human::get_current_house(){
+    return std::get<0>(current_address);
+};
+
+block* human::get_current_block(){
+    return std::get<1>(current_address);
 };
 
 // pathogen

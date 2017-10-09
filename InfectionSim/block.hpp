@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <iostream>
 
+#include "debug.hpp"
+
 #include "house.hpp"
 #include "human.hpp"
 

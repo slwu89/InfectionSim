@@ -7,12 +7,16 @@
 
 house::house(const int &id_new){
     id = id_new;
+    #ifdef DEBUG_INFSIM
     std::cout << "i'm an object of class house being born at memory location: " << this << std::endl;
+    #endif
 };
 
 house::~house(){
     humans.clear();
+    #ifdef DEBUG_INFSIM
     std::cout << "i'm an object of class house getting killed at memory location: " << this << std::endl;
+    #endif
 };
 
 

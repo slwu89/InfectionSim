@@ -1,3 +1,9 @@
+/*
+ * InfectionSim
+ * Sean Wu
+ * October 2017
+ */
+
 #include <iostream>
 #include <vector>
 
@@ -30,7 +36,7 @@ int main() {
         }
     }
     
-    // pathogens
+    // pathogens test
     pathogen_abstract* usePathogen = 0;
     pathogen_implementation* p_vivax_implementation = new pathogen_p_vivax;
     pathogen_implementation* p_falciparum_implementation = new pathogen_p_falciparum;
@@ -39,14 +45,12 @@ int main() {
     city[0]->get_house(1)->get_human(3)->set_pathogen(usePathogen);
     city[0]->get_house(1)->get_human(3)->get_pathogen()->fun();
     
-    
     usePathogen = new pathogen(p_vivax_implementation);
     city[0]->get_house(1)->get_human(4)->set_pathogen(usePathogen);
     city[0]->get_house(1)->get_human(4)->get_pathogen()->fun();
-    std::cout << city[0]->get_house(1)->get_human(4)->get_pathogen()->get_human_ptr()->get_inf() << std::endl;
-    city[0]->get_house(1)->get_human(4)->get_pathogen()->inf_human();
-    std::cout << city[0]->get_house(1)->get_human(4)->get_pathogen()->get_human_ptr()->get_inf() << std::endl;
-    
+//    std::cout << city[0]->get_house(1)->get_human(4)->get_pathogen()->get_human_ptr()->get_inf() << std::endl;
+//    city[0]->get_house(1)->get_human(4)->get_pathogen()->inf_human();
+//    std::cout << city[0]->get_house(1)->get_human(4)->get_pathogen()->get_human_ptr()->get_inf() << std::endl;
 
     return 0;
 }
