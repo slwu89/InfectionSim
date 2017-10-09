@@ -35,6 +35,10 @@ human* pathogen::get_human_ptr(){
     return(p_implementation->get_human_ptr_impl());
 };
 
+void pathogen::inf_human(){
+    p_implementation->inf_human_impl();
+}
+
 
 // p. falciparum
 
@@ -54,6 +58,10 @@ human* pathogen_p_falciparum::get_human_ptr_impl(){
     return(human_ptr);
 }
 
+void pathogen_p_falciparum::inf_human_impl(){
+    human_ptr->set_inf(true);
+};
+
 // p. vivax
 
 pathogen_p_vivax::pathogen_p_vivax(){
@@ -71,3 +79,8 @@ void pathogen_p_vivax::set_human_ptr_impl(human* h){
 human* pathogen_p_vivax::get_human_ptr_impl(){
     return(human_ptr);
 }
+
+void pathogen_p_vivax::inf_human_impl(){
+    human_ptr->set_inf(true);
+};
+

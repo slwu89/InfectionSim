@@ -1,3 +1,101 @@
+#ifndef pathogen_hpp
+#define pathogen_hpp
+
+#include <stdio.h>
+#include <iostream>
+
+class human; // forward declare human
+
+// implemented interface
+class pathogen_abstract {
+protected:
+    std::string         species;
+    human*              human_ptr;
+public:
+    virtual void fun() = 0;
+    virtual void set_human_ptr(human* h) = 0;
+    virtual human* get_human_ptr() = 0;
+    virtual void inf_human() = 0;
+};
+
+// internal implementation
+class pathogen_implementation {
+protected:
+    std::string         species;
+    human*              human_ptr;
+public:
+    virtual void fun_impl() = 0;
+    virtual void set_human_ptr_impl(human* h) = 0;
+    virtual human* get_human_ptr_impl() = 0;
+    virtual void inf_human_impl() = 0;
+};
+
+// bridge
+class pathogen_bridge : public pathogen_abstract {
+protected:
+    pathogen_implementation* p_implementation;
+    
+public:
+    pathogen_bridge(pathogen_implementation* p_backend);
+    
+};
+
+// pathogen class that we interact with
+class pathogen : public pathogen_bridge {
+public:
+    pathogen(pathogen_implementation* p_backend);
+    
+    void fun();
+    
+    void set_human_ptr(human* h);
+    
+    human* get_human_ptr();
+    
+    void inf_human();
+};
+
+// p. falciparum
+class pathogen_p_falciparum : public pathogen_implementation {
+protected:
+    int x_p_falciparum = 10;
+public:
+    pathogen_p_falciparum();
+    
+    void fun_impl();
+    
+    void set_human_ptr_impl(human* h);
+    human* get_human_ptr_impl();
+    
+    void inf_human_impl();
+};
+
+// p. vivax
+class pathogen_p_vivax : public pathogen_implementation {
+protected:
+    int x_p_vivax = 20;
+public:
+    pathogen_p_vivax();
+    
+    void fun_impl();
+    
+    void set_human_ptr_impl(human* h);
+    human* get_human_ptr_impl();
+    
+    void inf_human_impl();
+};
+
+
+#endif /* pathogen_hpp */
+
+
+
+
+
+
+
+
+
+
 //#ifndef pathogen_hpp
 //#define pathogen_hpp
 //
@@ -109,89 +207,3 @@
 //
 //
 //#endif /* pathogen_hpp */
-
-
-
-
-#ifndef pathogen_hpp
-#define pathogen_hpp
-
-#include <stdio.h>
-#include <iostream>
-
-class human; // forward declare human
-
-// implemented interface
-class pathogen_abstract {
-protected:
-    std::string         species;
-    human*              human_ptr;
-public:
-    virtual void fun() = 0;
-    virtual void set_human_ptr(human* h) = 0;
-    virtual human* get_human_ptr() = 0;
-};
-
-// internal implementation
-class pathogen_implementation {
-protected:
-    std::string         species;
-    human*              human_ptr;
-public:
-    virtual void fun_impl() = 0;
-    virtual void set_human_ptr_impl(human* h) = 0;
-    virtual human* get_human_ptr_impl() = 0;
-};
-
-// bridge
-class pathogen_bridge : public pathogen_abstract {
-protected:
-    pathogen_implementation* p_implementation;
-    
-public:
-    pathogen_bridge(pathogen_implementation* p_backend);
-    
-};
-
-// pathogen class that we interact with
-class pathogen : public pathogen_bridge {
-public:
-    pathogen(pathogen_implementation* p_backend);
-    
-    void fun();
-    
-    void set_human_ptr(human* h);
-    
-    human* get_human_ptr();
-};
-
-// p. falciparum
-class pathogen_p_falciparum : public pathogen_implementation {
-protected:
-    int x_p_falciparum = 10;
-public:
-    pathogen_p_falciparum();
-    
-    void fun_impl();
-    
-    void set_human_ptr_impl(human* h);
-    
-    human* get_human_ptr_impl();
-};
-
-// p. vivax
-class pathogen_p_vivax : public pathogen_implementation {
-protected:
-    int x_p_vivax = 20;
-public:
-    pathogen_p_vivax();
-    
-    void fun_impl();
-    void set_human_ptr_impl(human* h);
-    
-    human* get_human_ptr_impl();
-};
-
-
-#endif /* pathogen_hpp */
-
