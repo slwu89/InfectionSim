@@ -4,7 +4,7 @@
 human::human(const int &id_new){
     id = id_new;
     #ifdef DEBUG_INFSIM
-    std::cout << "node " << id << " being born at memory location: " << this << std::endl;;
+    std::cout << "human " << id << " being born at memory location: " << this << std::endl;;
     #endif
 };
 

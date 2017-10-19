@@ -7,14 +7,17 @@
 block::block(const int &id_new){
     id = id_new;
     #ifdef DEBUG_INFSIM
-    std::cout << "i'm an object of class block being born at memory location: " << this << std::endl;
+    std::cout << "block " << id << " being born at memory location: " << this << std::endl;
     #endif
 };
 
 block::~block(){
+    for(auto it=houses.begin(); it!=houses.end(); it++){
+        delete *it;
+    }
     houses.clear();
     #ifdef DEBUG_INFSIM
-    std::cout << "i'm an object of class block getting killed at memory location: " << this << std::endl;
+    std::cout << "block " << id << " getting killed at memory location: " << this << std::endl;
     #endif
 };
 
